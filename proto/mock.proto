@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package mock;
+
+service Mock {
+    rpc GetMockByID(GetMockByIDRequest) returns (GetMockByIDResponse) {}
+}
+
+message GetMockByIDRequest {
+    string mockID = 1;
+}
+
+message GetMockByIDResponse {
+    string mockID = 1;
+    string mocker = 2; 
+}
+
+message MockObject {
+    string mockID = 1;
+    string mocker = 2; 
+}
